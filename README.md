@@ -1,1 +1,1 @@
-# MvcOnlineTicariOtomasyon
+# Online Ticari Otomasyon Projesi
