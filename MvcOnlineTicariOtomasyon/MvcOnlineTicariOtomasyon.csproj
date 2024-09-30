@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CariController.cs" />
     <Compile Include="Controllers\DepartmanController.cs" />
+    <Compile Include="Controllers\FaturaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
@@ -136,6 +137,10 @@
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409302040213_CreateToplamColumnInFaturalarsTable.cs" />
+    <Compile Include="Migrations\202409302040213_CreateToplamColumnInFaturalarsTable.Designer.cs">
+      <DependentUpon>202409302040213_CreateToplamColumnInFaturalarsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classes\Admin.cs" />
@@ -546,6 +551,11 @@
     <Content Include="Views\Satis\SatisDetay.cshtml" />
     <Content Include="Views\Urun\UrunListesi.cshtml" />
     <Content Include="Views\Satis\SatisListesi.cshtml" />
+    <Content Include="Views\Fatura\Index.cshtml" />
+    <Content Include="Views\Fatura\FaturaEkle.cshtml" />
+    <Content Include="Views\Fatura\FaturaGetir.cshtml" />
+    <Content Include="Views\Fatura\FaturaDetay.cshtml" />
+    <Content Include="Views\Fatura\YeniKalem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -576,6 +586,11 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202409302040213_CreateToplamColumnInFaturalarsTable.resx">
+      <DependentUpon>202409302040213_CreateToplamColumnInFaturalarsTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
