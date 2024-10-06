@@ -13,8 +13,10 @@ namespace MvcOnlineTicariOtomasyon.Models.Classes
         public int FaturaKalemID { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(100)]
+        [Display(Name = "Açıklama")]
         public string Aciklama { get; set; }
         public int Miktar { get; set; }
+        [Display(Name = "Birim Fiyat")]
         public decimal BirimFiyat { get; set; }
         public decimal Tutar { get; set; }
         public int FaturaID { get; set; }

@@ -60,5 +60,11 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult PersonelList()
+        {
+            var values=context.Personels.ToList();
+            return View(values);
+        }
     }
 }

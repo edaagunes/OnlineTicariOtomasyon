@@ -13,10 +13,12 @@ namespace MvcOnlineTicariOtomasyon.Models.Classes
         public int DetayID { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
+        [Display(Name = "Ürün Adı")]
         public string urunad { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(2000)]
+        [Display(Name = "Ürün Bilgi")]
         public string urunbilgi { get; set; }
     }
 }

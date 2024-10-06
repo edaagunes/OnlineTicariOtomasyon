@@ -29,7 +29,22 @@
             <td>@u.AlisFiyat</td>
             <td>@u.SatisFiyat</td>
             <td>@u.Kategori.KategoriAd</td>
-            <td>@u.UrunGorsel</td>
+
+            <td>
+
+                <a href="@u.UrunGorsel" class="d-block photo-item" data-fancybox="gallery">
+
+                    <img src="@u.UrunGorsel" style="width:100px" />
+
+                    <div class="photo-text-more">
+
+                        <span class="icon icon-search"></span>
+
+                    </div>
+
+                </a>
+
+            </td>
 
             <td>
                 <a href="/Urun/UrunSil/@u.UrunID" class="btn btn-danger">Sil</a>

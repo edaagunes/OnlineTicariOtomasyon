@@ -14,9 +14,11 @@ namespace MvcOnlineTicariOtomasyon.Models.Classes
 
         [Column(TypeName = "Varchar")]
         [StringLength(10)]
+        [Display(Name = "Kullanıcı Adı")]
         public string KullaniciAd { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(10)]
+        [Display(Name = "Şifre")]
         public string Sifre { get; set; }
         [Column(TypeName = "char")]
         [StringLength(1)]
