@@ -1,0 +1,38 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Classes
+@model List<Kategori>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Kategori Tablosu</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Kategori Adı</th>
+                    @*<th>Progress Bar</th>
+                    <th style="width: 40px">Oran</th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @{ int sirano = 0;}
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@{sirano++;} @sirano.</td>
+                        <td>@x.KategoriAd</td>
+                        @*<td>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                            </div>
+                        </td>
+                        <td><span class="badge bg-danger">55%</span></td>*@
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
