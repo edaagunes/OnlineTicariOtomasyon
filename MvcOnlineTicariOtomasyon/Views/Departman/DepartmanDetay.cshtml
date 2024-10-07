@@ -13,18 +13,14 @@
 
 <table class="table table-hover">
     <tr>
-        <th>PERSONEL ID</th>
-        <th>PERSONEL AD</th>
-        <th>PERSONEL SOYAD</th>
+        <th>PERSONEL</th>
         <th>GÖRSEL</th>
         <th>SATIŞLAR</th>
     </tr>
     @foreach (var x in Model)
     {
      <tr>
-         <td>@x.PersonelID</td>
-         <td>@x.PersonelAd</td>
-         <td>@x.PersonelSoyad</td>
+         <td>@x.PersonelAd @x.PersonelSoyad</td>
 
          <td>
 

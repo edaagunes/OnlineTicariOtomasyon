@@ -1,14 +1,22 @@
 ﻿@using MvcOnlineTicariOtomasyon.Models.Classes
-@model List<Urun>
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Urun>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
+<br />
+@using(Html.BeginForm("Index","Urun",FormMethod.Get))
+            {
+                <p>
+                    Ürün Adı: @Html.TextBox("p")
+                    <input type="submit" value="Ara" />
+                </p>
+            }
 <br />
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
         <th>ÜRÜN</th>
         <th>MARKA</th>
         <th>STOK</th>
@@ -22,12 +30,11 @@
     @foreach (var u in Model)
     {
         <tr>
-            <td>@u.UrunID</td>
             <td>@u.UrunAd</td>
             <td>@u.Marka</td>
             <td>@u.Stok</td>
-            <td>@u.AlisFiyat</td>
-            <td>@u.SatisFiyat</td>
+            <td>@u.AlisFiyat ₺</td>
+            <td>@u.SatisFiyat ₺</td>
             <td>@u.Kategori.KategoriAd</td>
 
             <td>
@@ -57,4 +64,9 @@
     }
 </table>
 
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    {"page-link"}
+})
 <a href="/Urun/YeniUrun" class="btn btn-info">Yeni Ürün</a>

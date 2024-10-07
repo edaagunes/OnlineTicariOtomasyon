@@ -4,16 +4,20 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcOnlineTicariOtomasyon.Models.Classes;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
     public class UrunController : Controller
     {
         Context context = new Context();
-        public ActionResult Index()
+        public ActionResult Index(int? sayfa, string p)
         {
-            var urunler = context.Uruns.Where(x => x.Durum == true).ToList();
-            return View(urunler);
+
+            var degerler = context.Uruns.Where(c => c.UrunAd.Contains(p) || p == null || c.Marka.Contains(p) || c.Kategori.KategoriAd.Contains(p)).ToList().ToPagedList(sayfa ?? 1, 4);
+
+            return View(degerler);
         }
 
         [HttpGet]
@@ -25,7 +29,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
                                                Text = x.KategoriAd,
                                                Value = x.KategoriID.ToString()
                                            }).ToList();
-            ViewBag.deger=deger1;
+            ViewBag.deger = deger1;
             return View();
         }
 
@@ -55,23 +59,23 @@ namespace MvcOnlineTicariOtomasyon.Controllers
                                                Value = x.KategoriID.ToString()
                                            }).ToList();
             ViewBag.deger = deger1;
-    
 
-            var urunDeger=context.Uruns.Find(id);
-            return View("UrunGetir",urunDeger);
+
+            var urunDeger = context.Uruns.Find(id);
+            return View("UrunGetir", urunDeger);
         }
 
         public ActionResult UrunGuncelle(Urun p)
         {
             var urun = context.Uruns.Find(p.UrunID);
-            urun.AlisFiyat=p.AlisFiyat;
-            urun.Durum=p.Durum;
-            urun.KategoriID=p.KategoriID;
-            urun.Marka=p.Marka;
-            urun.SatisFiyat =p.SatisFiyat;
-            urun.Stok=p.Stok;
-            urun.UrunAd=p.UrunAd;
-            urun.UrunGorsel=p.UrunGorsel;
+            urun.AlisFiyat = p.AlisFiyat;
+            urun.Durum = p.Durum;
+            urun.KategoriID = p.KategoriID;
+            urun.Marka = p.Marka;
+            urun.SatisFiyat = p.SatisFiyat;
+            urun.Stok = p.Stok;
+            urun.UrunAd = p.UrunAd;
+            urun.UrunGorsel = p.UrunGorsel;
             context.SaveChanges();
             return RedirectToAction("Index");
 
