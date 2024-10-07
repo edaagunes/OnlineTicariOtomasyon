@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.7.0.js"></script>
+
+<br />
+<br />
+<button class="btn btn-primary" id="Btn1">Button</button>
+<button class="btn btn-primary" id="Btn2">Button2</button>
+<button class="btn btn-primary" id="Btn3">Button3</button>
+<button class="btn btn-primary" id="Btn4">Button4</button>
+<button class="btn btn-primary" id="Btn5">Button5</button>
+
+<script>
+    $('#Btn1').click(function () {
+        swal("Hello World");
+    })
+</script>
+
+<script>
+    $('#Btn2').click(function () {
+        swal("Here's the title", "Hello World");
+    })
+</script>
+
+<script>
+    $('#Btn3').click(function () {
+        swal("Here's the title", "Hello World", "success");
+    })
+</script>
+
+<script>
+    $('#Btn4').click(function () {
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500
+        });
+    })
+</script>
+
+<script>
+    $('#Btn5').click(function () {
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500
+        });
+    })
+
+</script>

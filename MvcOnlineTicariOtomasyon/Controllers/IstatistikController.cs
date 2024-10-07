@@ -42,7 +42,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var deger14 = context.SatisHarekets.Sum(x => x.ToplamTutar).ToString();
             ViewBag.d14 = deger14;
 
-            DateTime bugun = DateTime.Now;
+            DateTime bugun = DateTime.Now.Date;
             var deger15 = context.SatisHarekets.Count(x => x.Tarih == bugun).ToString();
             ViewBag.d15 = deger15;
             var deger16 = context.SatisHarekets.Where(x => x.Tarih == bugun).Sum(y => (decimal?)y.ToplamTutar).ToString();

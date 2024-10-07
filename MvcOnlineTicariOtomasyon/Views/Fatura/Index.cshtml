@@ -13,7 +13,6 @@
         <th>TOPLAM</th>
         <th>GÜNCELLE</th>
         <th>DETAYLAR</th>
-        <th>POPUP LİSTE</th>
         <th>YENİ KALEM</th>
         
     </tr>
@@ -27,12 +26,40 @@
 
             <td><a href="/Fatura/FaturaGetir/@k.FaturaID" class="btn btn-warning">Güncelle</a></td>
             <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:lightgrey">Detaylar</a></td>
-            <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:azure">PopUp</a></td>
             <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:plum">Kalem</a></td>
         </tr>
     }
 </table>
 <a href="/Fatura/FaturaEkle" class="btn btn-info">Yeni Fatura Girişi</a>
-
+<br />
+<br />
+<button type="button" class="btn btn-default" style="background-color:lightblue; color:white" data-toggle="modal" data-target="#Modal1" >Popup Penceresi</button>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Popup Diyalog Ekranı</h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Seri No</td>
+                        <td>Sıra No</td>
+                        <td>Tutar</td>
+                    </tr>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.FaturaSeriNo</td>
+                            <td>@x.FaturaSıraNo</td>
+                            <td>@x.Toplam</td>
+                        </tr>
+                    }
+                </table>
+                <button type="button" class="btn btn-default" style="background-color:lightblue;color:white" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 

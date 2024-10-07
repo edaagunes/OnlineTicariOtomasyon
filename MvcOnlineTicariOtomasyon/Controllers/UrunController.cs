@@ -86,5 +86,25 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = context.Uruns.ToList();
             return View(degerler);
         }
+        [HttpGet]
+        public ActionResult SatisYap(int id)
+        {
+            List<SelectListItem> deger3 = (from x in context.Personels.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.PersonelAd + " " + x.PersonelSoyad,
+                                               Value = x.PersonelID.ToString()
+                                           }).ToList();
+            ViewBag.dgr3 = deger3;
+            var deger1 = context.Uruns.Find(id);
+            ViewBag.dgr1 = deger1.UrunID;
+            ViewBag.dgr2 = deger1.SatisFiyat;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult SatisYap(SatisHareket p)
+        {
+            return View();
+        }
     }
 }

@@ -12,16 +12,19 @@
         @Html.HiddenFor(x => x.PersonelID)
         @Html.LabelFor(x => x.PersonelAd)
         @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
-      
+
         <br />
         @Html.LabelFor(x => x.PersonelSoyad)
         @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
         <br />
         @Html.LabelFor(x => x.PersonelGorsel)
-        @Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control" })
+        <div style="display: flex; align-items: center;">
+            @Html.TextBoxFor(x => x.PersonelGorsel, new { @class = "form-control", style = "width: 90%;" })
+            <img src="@Url.Content(Model.PersonelGorsel)" height="90" width="90" style="margin-left: 10px;" />
+        </div>
         <br />
         @Html.LabelFor(x => x.Departman)
-        @Html.DropDownListFor(x=>x.DepartmanID,(List<SelectListItem>)ViewBag.deger, new { @class = "form-control" })
+        @Html.DropDownListFor(x => x.DepartmanID, (List<SelectListItem>)ViewBag.deger, new { @class = "form-control" })
         @Html.HiddenFor(x => x.DepartmanID, new { @class = "form-control" })
         <br />
         <button class="btn btn-default" style="background-color:yellowgreen">Güncelle</button>

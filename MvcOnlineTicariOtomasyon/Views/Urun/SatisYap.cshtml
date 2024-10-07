@@ -1,0 +1,38 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Classes.SatisHareket
+@{
+    ViewBag.Title = "SatisYap";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Satış Yap</h2>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.UrunID)
+    <input name="UrunID" type="text" value="@ViewBag.dgr1" class="form-control" readonly />
+    <br />
+    @Html.LabelFor(x => x.PersonelID)
+    @Html.LabelFor(x => x.Personel)
+    @Html.DropDownListFor(x => x.PersonelID, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.LabelFor(x => x.CariID)
+    @Html.TextBoxFor(x => x.CariID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Adet)
+    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Fiyat)
+    <input name="Fiyat" type="text" value="@ViewBag.dgr2" class="form-control" />
+    <br />
+    @Html.LabelFor(x => x.ToplamTutar)
+    @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Satış Yap</button>
+</form>
+
+
