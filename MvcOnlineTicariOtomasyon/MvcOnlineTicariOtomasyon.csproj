@@ -155,6 +155,10 @@
     <Compile Include="Migrations\202409302040213_CreateToplamColumnInFaturalarsTable.Designer.cs">
       <DependentUpon>202409302040213_CreateToplamColumnInFaturalarsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202410081533538_kargotakip.cs" />
+    <Compile Include="Migrations\202410081533538_kargotakip.Designer.cs">
+      <DependentUpon>202410081533538_kargotakip.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classes\Admin.cs" />
     <Compile Include="Models\Classes\Cariler.cs" />
@@ -165,6 +169,8 @@
     <Compile Include="Models\Classes\FaturaKalem.cs" />
     <Compile Include="Models\Classes\Faturalar.cs" />
     <Compile Include="Models\Classes\Gider.cs" />
+    <Compile Include="Models\Classes\KargoDetay.cs" />
+    <Compile Include="Models\Classes\KargoTakip.cs" />
     <Compile Include="Models\Classes\Kategori.cs" />
     <Compile Include="Models\Classes\Personel.cs" />
     <Compile Include="Models\Classes\SatisHareket.cs" />
@@ -2971,6 +2977,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202409302040213_CreateToplamColumnInFaturalarsTable.resx">
       <DependentUpon>202409302040213_CreateToplamColumnInFaturalarsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410081533538_kargotakip.resx">
+      <DependentUpon>202410081533538_kargotakip.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

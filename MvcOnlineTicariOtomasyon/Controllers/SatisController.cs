@@ -41,6 +41,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             ViewBag.dgr1 = deger1;
             ViewBag.dgr2 = deger2;
             ViewBag.dgr3 = deger3;
+
             return View();
         }
 

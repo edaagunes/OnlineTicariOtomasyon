@@ -12,27 +12,34 @@
     <input name="UrunID" type="text" value="@ViewBag.dgr1" class="form-control" readonly />
     <br />
     @Html.LabelFor(x => x.PersonelID)
-    @Html.LabelFor(x => x.Personel)
     @Html.DropDownListFor(x => x.PersonelID, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
-    <br />
     <br />
     @Html.LabelFor(x => x.CariID)
     @Html.TextBoxFor(x => x.CariID, new { @class = "form-control" })
     <br />
     @Html.LabelFor(x => x.Adet)
-    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+    <input type="number" name="Adet" class="form-control" min="0" max="10" placeholder="Adet sayısı giriniz" id="txt1" onchange="sum();" />
     <br />
     @Html.LabelFor(x => x.Fiyat)
-    <input name="Fiyat" type="text" value="@ViewBag.dgr2" class="form-control" />
+    <input name="Fiyat" type="text" value="@ViewBag.dgr2" class="form-control" id="txt2" onkeyup="sum();" />
     <br />
     @Html.LabelFor(x => x.ToplamTutar)
-    @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
-    <br />
-    @Html.LabelFor(x => x.Tarih)
-    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
-    <br />
+    <input name="ToplamTutar" type="text" value="0" class="form-control" id="txt3" readonly />
+    <br /> 
 
     <button class="btn btn-primary">Satış Yap</button>
 </form>
+<br />
+
+<script>
+    function sum() {
+        var sayi1 = document.getElementById('txt1').value;
+        var sayi2 = document.getElementById('txt2').value;
+        var sonuc = parseInt(sayi1) * parseInt(sayi2);
+        if (!isNaN(parseInt(sonuc))) {
+            document.getElementById('txt3').value = sonuc;
+        }
+    }
+</script>
 
 
