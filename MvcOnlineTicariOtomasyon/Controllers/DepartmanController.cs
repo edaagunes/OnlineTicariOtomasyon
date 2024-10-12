@@ -7,6 +7,7 @@ using MvcOnlineTicariOtomasyon.Models.Classes;
 
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
+    [Authorize]
     public class DepartmanController : Controller
     {
         Context context = new Context();
@@ -15,6 +16,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             var degerler = context.Departmans.Where(x=>x.Durum==true).ToList();
             return View(degerler);
         }
+        [Authorize(Roles ="A")]
         [HttpGet]
         public ActionResult DepartmanEkle()
         {
