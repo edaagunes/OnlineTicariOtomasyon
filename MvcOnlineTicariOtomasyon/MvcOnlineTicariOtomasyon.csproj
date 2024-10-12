@@ -173,6 +173,7 @@
     <Compile Include="Models\Classes\Context.cs" />
     <Compile Include="Models\Classes\Departman.cs" />
     <Compile Include="Models\Classes\Detay.cs" />
+    <Compile Include="Models\Classes\DinamikFatura.cs" />
     <Compile Include="Models\Classes\FaturaKalem.cs" />
     <Compile Include="Models\Classes\Faturalar.cs" />
     <Compile Include="Models\Classes\Gider.cs" />
@@ -2976,6 +2977,7 @@
     <Content Include="Views\CariPanel\Partial2.cshtml" />
     <Content Include="Views\Error\PageError.cshtml" />
     <Content Include="Views\Kategori\Deneme.cshtml" />
+    <Content Include="Views\Fatura\Dinamik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
