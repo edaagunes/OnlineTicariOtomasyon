@@ -179,6 +179,7 @@
     <Compile Include="Models\Classes\KargoDetay.cs" />
     <Compile Include="Models\Classes\KargoTakip.cs" />
     <Compile Include="Models\Classes\Kategori.cs" />
+    <Compile Include="Models\Classes\KategoriListe.cs" />
     <Compile Include="Models\Classes\Mesajlar.cs" />
     <Compile Include="Models\Classes\Personel.cs" />
     <Compile Include="Models\Classes\SatisHareket.cs" />
@@ -2974,6 +2975,7 @@
     <Content Include="Views\CariPanel\Partial1.cshtml" />
     <Content Include="Views\CariPanel\Partial2.cshtml" />
     <Content Include="Views\Error\PageError.cshtml" />
+    <Content Include="Views\Kategori\Deneme.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
