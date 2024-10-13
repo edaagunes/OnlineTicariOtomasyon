@@ -122,7 +122,7 @@ Login Paneli'nde Personel Girişi yaparak sisteme girilir.
 ![4](https://github.com/user-attachments/assets/bca31ba6-6a25-43c0-b325-ce788e0a5d8e)
 
 
-:rainbow: **KULLANICI PANELİ**
+<h3 id="kullanici-paneli">:rainbow: Kullanıcı Paneli</h3>
 
 ![5](https://github.com/user-attachments/assets/1f39607e-4761-41ed-a2c5-5d4ae00ca6c3)
 ![6](https://github.com/user-attachments/assets/7e59c3cf-8184-4131-bb16-38a23d5a43ca)
@@ -135,7 +135,7 @@ Login Paneli'nde Personel Girişi yaparak sisteme girilir.
 ![12](https://github.com/user-attachments/assets/51c371fe-2c98-4ba4-b6a2-6002c5bf1c6f)
 ![13](https://github.com/user-attachments/assets/048c5e00-7a56-4198-a3f8-a1c469767d3c)
 
-:circus_tent:**ADMİN PANELİ**
+<h3 id="admin-paneli">:circus_tent:Admin Paneli</h3>
  
 ![14](https://github.com/user-attachments/assets/bd5cf710-6e47-463f-b6b3-d47ecfb277da)
 ![15](https://github.com/user-attachments/assets/d7d94c21-38dd-446a-8127-56d80c5d0287)
