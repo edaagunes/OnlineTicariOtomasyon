@@ -90,7 +90,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             m.Gonderici = mail;
             context.Mesajlars.Add(m);
             context.SaveChanges();
-            return View();
+            return RedirectToAction("GelenMesajlar");
         }
 
         public ActionResult KargoTakip(string p)
