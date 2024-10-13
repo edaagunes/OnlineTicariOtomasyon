@@ -4,7 +4,7 @@
 
  :star:Kullanıcıların eklenen ürünleri görmesi, sipariş geçmişini görebilmesi, kargo hareketlerini takip edebilmesi, kullanıcılara mesaj gönderebilmesi; Admin tarafında personel ekleme, dinamik fatura ekleme gibi pek çok özellikler eklenerek bir Ticari Otomasyon simülasyonu oluşturuldu.
 
-### 🙇[**Kullanıcı Tarafı**](kullanici-paneli) :bow:
+### 🙇[**Kullanıcı Tarafı**](#kullanici-paneli) :bow:
 
 Login Paneli'nde kayıt olduktan sonra Cari Girişi yaparak sisteme girilir.
 
@@ -25,7 +25,7 @@ Login Paneli'nde kayıt olduktan sonra Cari Girişi yaparak sisteme girilir.
  :pushpin:**Çıkış Yap** sistemden çıkış yapar.
  
 
-### 💎[**Admin Tarafı**](admin-paneli)💎
+### 💎[**Admin Tarafı**](#admin-paneli)💎
 
 Login Paneli'nde Personel Girişi yaparak sisteme girilir.
 
